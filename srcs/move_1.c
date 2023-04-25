@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   move_1.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rlouvrie <rlouvrie@student.42.fr >         +#+  +:+       +#+        */
+/*   By: rlouvrie <rlouvrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 21:12:50 by rlouvrie          #+#    #+#             */
-/*   Updated: 2023/04/25 21:39:06 by rlouvrie         ###   ########.fr       */
+/*   Updated: 2023/04/26 00:52:38 by rlouvrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	move_both_up_to_b(t_stack **src, t_stack **dest, t_ops **ops, int nb)
 		rr(src, dest, ops);
 	while ((*src)->value != nb)
 		ra(src, ops, 1);
-	while (find_position_b(src, nb) > 0)
+	while (find_position_b(dest, nb) > 0)
 		rb(dest, ops, 1);
 	pb(src, dest, ops, 1);
 	return (-1);
