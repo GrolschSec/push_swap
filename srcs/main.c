@@ -6,7 +6,7 @@
 /*   By: rlouvrie <rlouvrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 18:57:20 by rlouvrie          #+#    #+#             */
-/*   Updated: 2023/04/26 07:31:12 by rlouvrie         ###   ########.fr       */
+/*   Updated: 2023/04/26 07:40:16 by rlouvrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	main(int argc, char **argv)
 	t_stack	*stack_b;
 
 	if (argc < 2)
-		ft_error(1);
+		return (0);
 	else if (argc == 2)
 	{
 		stack_a = string_case(argv);
