@@ -1,0 +1,5 @@
+visualizer
+srcs/*.o
+push_swap
+ft/*.o
+imgui.ini
