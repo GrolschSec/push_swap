@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rlouvrie <rlouvrie@student.42.fr >         +#+  +:+       +#+        */
+/*   By: rlouvrie <rlouvrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 15:40:56 by rlouvrie          #+#    #+#             */
-/*   Updated: 2023/04/22 16:55:59 by rlouvrie         ###   ########.fr       */
+/*   Updated: 2023/04/26 05:45:44 by rlouvrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,10 @@ t_stack	*init_stack(int argc, char **argv)
 	while (++i < argc)
 		integers[i - 1] = atoi(argv[i]);
 	push_integers(&stack_a, integers, argc - 1);
+	if (!stack_a)
+		return (free(integers), NULL);
 	init_index(&stack_a, integers, argc -1);
-	free(integers);
-	return (stack_a);
+	return (free(integers), stack_a);
 }
 
 void	sort_int_tab(int *integers, int len)

@@ -6,7 +6,7 @@
 /*   By: rlouvrie <rlouvrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 17:55:58 by rlouvrie          #+#    #+#             */
-/*   Updated: 2023/03/14 18:56:08 by rlouvrie         ###   ########.fr       */
+/*   Updated: 2023/04/26 05:40:37 by rlouvrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,14 @@ void	free_operations(t_ops *ops)
 		ops = ops->next;
 		free(temp);
 	}
+}
+
+void	free_tab(char **tab)
+{
+	int	i;
+
+	i = 0;
+	while (tab[i])
+		free(tab[i++]);
+	free(tab);
 }

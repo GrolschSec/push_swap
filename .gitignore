@@ -3,3 +3,5 @@ srcs/*.o
 push_swap
 ft/*.o
 imgui.ini
+.gdb_history
+checker_linux

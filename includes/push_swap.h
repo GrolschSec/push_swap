@@ -6,7 +6,7 @@
 /*   By: rlouvrie <rlouvrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 17:04:16 by rlouvrie          #+#    #+#             */
-/*   Updated: 2023/04/26 02:21:40 by rlouvrie         ###   ########.fr       */
+/*   Updated: 2023/04/26 05:32:54 by rlouvrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,9 @@ typedef struct s_ops
 	struct s_ops	*next;
 }				t_ops;
 
+
+/*main.c*/
+char	**check_string(char *argv);
 /*init.c*/
 t_stack	*init_stack(int argc, char **argv);
 void	init_index(t_stack **stack, int *integers, int len);
@@ -78,6 +81,7 @@ void	print_stack(t_stack *stack);
 /*free.c*/
 void	free_stack(t_stack **stack);
 void	free_operations(t_ops *ops);
+void	free_tab(char **tab);
 /*push_swap.c*/
 void	push_swap(t_stack **stack_a, t_stack **stack_b);
 void	sort_three(t_stack **a, t_ops **ops);
@@ -91,6 +95,7 @@ int		is_sorted(t_stack **stack);
 int		find_min(t_stack **stack);
 int		find_max(t_stack **stack);
 int		find_index(t_stack **stack, int nb);
+int		tab_len(char **tab);
 /*cost_1.c*/
 int		find_best_move_a_to_b(t_stack **a, t_stack **b);
 int		find_position_b(t_stack **stack, int nb);

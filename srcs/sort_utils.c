@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_utils.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rlouvrie <rlouvrie@student.42.fr >         +#+  +:+       +#+        */
+/*   By: rlouvrie <rlouvrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 15:15:32 by rlouvrie          #+#    #+#             */
-/*   Updated: 2023/04/25 20:22:32 by rlouvrie         ###   ########.fr       */
+/*   Updated: 2023/04/26 05:32:23 by rlouvrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,5 +74,15 @@ int	find_index(t_stack **stack, int nb)
 		tmp = tmp->next;
 	}
 	tmp->position = 0;
+	return (i);
+}
+
+int	tab_len(char **tab)
+{
+	int	i;
+
+	i = 0;
+	while (tab[i])
+		i++;
 	return (i);
 }
