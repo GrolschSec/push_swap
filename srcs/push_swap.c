@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rlouvrie <rlouvrie@student.42.fr >         +#+  +:+       +#+        */
+/*   By: rlouvrie <rlouvrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 21:17:30 by rlouvrie          #+#    #+#             */
-/*   Updated: 2023/04/25 21:41:51 by rlouvrie         ###   ########.fr       */
+/*   Updated: 2023/04/26 02:30:01 by rlouvrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,21 @@ void	sort_three(t_stack **a, t_ops **ops)
 
 void	cost_based_algorithm(t_stack **a, t_stack **b, t_ops **ops)
 {
+	int		i;
+
 	push_a_to_b(a, b, ops);	
+	push_b_to_a(a, b, ops);
+	i = find_index(a, find_min(a));
+	if (i < stack_len(*a) - i)
+	{
+		while ((*a)->value != find_min(a))
+			ra(a, ops, 1);
+	}
+	else
+	{
+		while ((*a)->value != find_min(a))
+			rra(a, ops, 1);
+	}
 }
 
 void	push_swap(t_stack **a, t_stack **b)

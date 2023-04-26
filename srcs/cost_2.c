@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cost_2.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rlouvrie <rlouvrie@student.42.fr >         +#+  +:+       +#+        */
+/*   By: rlouvrie <rlouvrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 20:45:24 by rlouvrie          #+#    #+#             */
-/*   Updated: 2023/04/25 20:53:43 by rlouvrie         ###   ########.fr       */
+/*   Updated: 2023/04/26 01:41:16 by rlouvrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,4 +55,3 @@ int	a_up_b_down_a_to_b(t_stack **a, t_stack **b, int nb)
 	i += find_index(a, nb);
 	return (i);
 }
-

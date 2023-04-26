@@ -16,7 +16,9 @@ SRC = main.c \
 	sort_1.c \
 	cost_1.c \
 	cost_2.c \
+	cost_3.c \
 	move_1.c \
+	move_2.c \
 
 DIR 		= ${addprefix srcs/,${SRC}}
 
