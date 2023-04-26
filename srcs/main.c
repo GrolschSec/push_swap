@@ -6,7 +6,7 @@
 /*   By: rlouvrie <rlouvrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 18:57:20 by rlouvrie          #+#    #+#             */
-/*   Updated: 2023/04/26 07:40:16 by rlouvrie         ###   ########.fr       */
+/*   Updated: 2023/04/26 07:53:11 by rlouvrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ int	main(int argc, char **argv)
 			ft_error(3);
 	}
 	stack_b = NULL;
+	if (is_sorted(&stack_a))
+		return (free_stack(&stack_a), 0);
 	push_swap(&stack_a, &stack_b);
 	free_stack(&stack_a);
 	return (0);
