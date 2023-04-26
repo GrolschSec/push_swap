@@ -6,7 +6,7 @@
 /*   By: rlouvrie <rlouvrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 21:17:30 by rlouvrie          #+#    #+#             */
-/*   Updated: 2023/04/26 06:41:36 by rlouvrie         ###   ########.fr       */
+/*   Updated: 2023/04/26 07:21:14 by rlouvrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,6 @@ void	push_swap(t_stack **a, t_stack **b)
 	t_ops	*ops;
 	int		len;
 
-	(void)b;
 	ops = NULL;
 	len = stack_len(*a);
 	if (len == 2 && !is_sorted(a))

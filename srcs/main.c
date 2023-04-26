@@ -6,7 +6,7 @@
 /*   By: rlouvrie <rlouvrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 18:57:20 by rlouvrie          #+#    #+#             */
-/*   Updated: 2023/04/26 06:47:14 by rlouvrie         ###   ########.fr       */
+/*   Updated: 2023/04/26 07:31:12 by rlouvrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	main(int argc, char **argv)
 	{
 		if (check_args(argc, argv) != 1)
 			ft_error(2);
-		stack_a = init_stack(argc - 1, argv);
+		stack_a = init_stack(argc - 1, &argv[1]);
 		if (!stack_a)
 			ft_error(3);
 	}
@@ -69,10 +69,16 @@ t_stack	*string_case(char **argv)
 		ft_error(1);
 	len = tab_len(args);
 	if (check_args(len, args) != 1)
-		return (free_tab(args), ft_error(2), 1);
+	{
+		free_tab(args);
+		ft_error(2);
+	}
 	stack_a = init_stack(len, args);
 	if (!stack_a)
-		return (free_tab(args), ft_error(3), 1);
+	{
+		free_tab(args);
+		ft_error(3);
+	}
 	free_tab(args);
 	return (stack_a);
 }
