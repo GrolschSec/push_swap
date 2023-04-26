@@ -6,7 +6,7 @@
 /*   By: rlouvrie <rlouvrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 19:56:37 by rlouvrie          #+#    #+#             */
-/*   Updated: 2023/04/26 03:14:13 by rlouvrie         ###   ########.fr       */
+/*   Updated: 2023/04/26 06:50:08 by rlouvrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	find_best_move_a_to_b(t_stack **a, t_stack **b)
 int	find_best_move_b_to_a(t_stack **a, t_stack **b)
 {
 	int		i;
-	t_stack *tmp;
+	t_stack	*tmp;
 
 	tmp = *b;
 	i = both_down_b_to_a(a, b, tmp->value);

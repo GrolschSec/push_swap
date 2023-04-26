@@ -6,7 +6,7 @@
 /*   By: rlouvrie <rlouvrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 21:17:30 by rlouvrie          #+#    #+#             */
-/*   Updated: 2023/04/26 02:30:01 by rlouvrie         ###   ########.fr       */
+/*   Updated: 2023/04/26 06:41:36 by rlouvrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void	cost_based_algorithm(t_stack **a, t_stack **b, t_ops **ops)
 {
 	int		i;
 
-	push_a_to_b(a, b, ops);	
+	push_a_to_b(a, b, ops);
 	push_b_to_a(a, b, ops);
 	i = find_index(a, find_min(a));
 	if (i < stack_len(*a) - i)

@@ -6,7 +6,7 @@
 /*   By: rlouvrie <rlouvrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 19:43:43 by rlouvrie          #+#    #+#             */
-/*   Updated: 2023/04/26 02:22:47 by rlouvrie         ###   ########.fr       */
+/*   Updated: 2023/04/26 06:51:09 by rlouvrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	push_a_to_b(t_stack **a, t_stack **b, t_ops **ops)
 void	push_b_to_a(t_stack **a, t_stack **b, t_ops **ops)
 {
 	int		i;
-	t_stack *tmp;
+	t_stack	*tmp;
 
 	while (*b)
 	{
@@ -41,7 +41,7 @@ void	push_b_to_a(t_stack **a, t_stack **b, t_ops **ops)
 			else if (i == a_down_b_up_b_to_a(a, b, tmp->value))
 				i = move_a_down_b_up_to_a(a, b, ops, tmp->value);
 			else if (i == a_up_b_down_b_to_a(a, b, tmp->value))
-				i = move_a_up_b_down_to_a(a, b , ops, tmp->value);
+				i = move_a_up_b_down_to_a(a, b, ops, tmp->value);
 			else
 				tmp = tmp->next;
 		}
@@ -72,4 +72,3 @@ void	a_to_b_until_three(t_stack **a, t_stack **b, t_ops **ops)
 		}
 	}
 }
-

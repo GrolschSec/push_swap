@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rlouvrie <rlouvrie@student.42.fr >         +#+  +:+       +#+        */
+/*   By: rlouvrie <rlouvrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 17:05:39 by rlouvrie          #+#    #+#             */
-/*   Updated: 2023/04/25 20:25:07 by rlouvrie         ###   ########.fr       */
+/*   Updated: 2023/04/26 06:49:21 by rlouvrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,14 +74,4 @@ int	stack_len(t_stack *stack)
 		stack = stack->next;
 	}
 	return (len);
-}
-
-t_stack *get_last_element(t_stack **stack)
-{
-	t_stack *tmp;
-
-	tmp = *stack;
-	while (tmp->next)
-		tmp = tmp->next;
-	return (tmp);
 }

@@ -6,7 +6,7 @@
 /*   By: rlouvrie <rlouvrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 01:40:07 by rlouvrie          #+#    #+#             */
-/*   Updated: 2023/04/26 03:37:47 by rlouvrie         ###   ########.fr       */
+/*   Updated: 2023/04/26 06:42:33 by rlouvrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,4 +55,3 @@ int	a_up_b_down_b_to_a(t_stack **a, t_stack **b, int nb)
 	i += find_position_a(a, nb);
 	return (i);
 }
-

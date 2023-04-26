@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   reverse_rotate.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rlouvrie <rlouvrie@student.42.fr >         +#+  +:+       +#+        */
+/*   By: rlouvrie <rlouvrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 17:07:01 by rlouvrie          #+#    #+#             */
-/*   Updated: 2023/04/24 17:09:24 by rlouvrie         ###   ########.fr       */
+/*   Updated: 2023/04/26 06:47:23 by rlouvrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,4 +54,3 @@ void	rrr(t_stack **stack_a, t_stack **stack_b, t_ops **ops)
 	rrb(stack_b, ops, 0);
 	add_operation(ops, "rrr");
 }
-

@@ -6,7 +6,7 @@
 /*   By: rlouvrie <rlouvrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 15:15:32 by rlouvrie          #+#    #+#             */
-/*   Updated: 2023/04/26 06:11:43 by rlouvrie         ###   ########.fr       */
+/*   Updated: 2023/04/26 06:42:09 by rlouvrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	is_sorted(t_stack **stack)
 
 int	find_min(t_stack **stack)
 {
-	t_stack *tmp;
+	t_stack	*tmp;
 	int		nb;
 
 	tmp = *stack;
@@ -47,7 +47,7 @@ int	find_min(t_stack **stack)
 
 int	find_max(t_stack **stack)
 {
-	t_stack *tmp;
+	t_stack	*tmp;
 	int		nb;
 
 	tmp = *stack;

@@ -6,7 +6,7 @@
 /*   By: rlouvrie <rlouvrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 17:04:16 by rlouvrie          #+#    #+#             */
-/*   Updated: 2023/04/26 05:32:54 by rlouvrie         ###   ########.fr       */
+/*   Updated: 2023/04/26 06:49:10 by rlouvrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,6 @@ typedef struct s_stack
 	int				value;
 	int				index;
 	int				position;
-	int				w_pos;
-	int				cost;
-	int 			cost_a;
-	int				t_cost;
-	int				len_a;
-	int 			len_b;
 	struct s_stack	*next;
 }					t_stack;
 
@@ -39,13 +33,12 @@ typedef struct s_ops
 	struct s_ops	*next;
 }				t_ops;
 
-
 /*main.c*/
 char	**check_string(char *argv);
+t_stack	*string_case(char **argv);
 /*init.c*/
 t_stack	*init_stack(int argc, char **argv);
-void	init_index(t_stack **stack, int *integers, int len);
-void	sort_int_tab(int *integers, int len);
+t_stack	*get_last_element(t_stack **stack);
 /*parse.c*/
 int		is_within_int_range(const char *str);
 int		check_double(int *nums, int actual, int size);
@@ -54,7 +47,6 @@ int		check_args(int argc, char **argv);
 void	push_integers(t_stack **stack_a, int *integers, int count);
 void	create_stacks(t_stack **stack_a, t_stack **stack_b);
 void	push(t_stack **stack, int value);
-t_stack *get_last_element(t_stack **stack);
 t_stack	*new_node(int value);
 int		stack_len(t_stack *stack);
 /*swap.c*/
@@ -114,11 +106,17 @@ int		a_up_b_down_b_to_a(t_stack **a, t_stack **b, int nb);
 /*move_1.c*/
 int		move_both_up_to_b(t_stack **src, t_stack **dest, t_ops **ops, int nb);
 int		move_both_down_to_b(t_stack **src, t_stack **dest, t_ops **ops, int nb);
-int		move_a_down_b_up_to_b(t_stack **src, t_stack **dest, t_ops **ops, int nb);
-int		move_a_up_b_down_to_b(t_stack **src, t_stack **dest, t_ops **ops, int nb);
+int		move_a_down_b_up_to_b(t_stack **src, t_stack **dest,
+			t_ops **ops, int nb);
+int		move_a_up_b_down_to_b(t_stack **src, t_stack **dest,
+			t_ops **ops, int nb);
 /*move_2.c*/
-int		move_both_up_to_a(t_stack **src, t_stack **dest, t_ops **ops, int nb);
-int		move_both_down_to_a(t_stack **src, t_stack **dest, t_ops **ops, int nb);
-int		move_a_down_b_up_to_a(t_stack **src, t_stack **dest, t_ops **ops, int nb);
-int		move_a_up_b_down_to_a(t_stack **src, t_stack **dest, t_ops **ops, int nb);
+int		move_both_up_to_a(t_stack **src, t_stack **dest,
+			t_ops **ops, int nb);
+int		move_both_down_to_a(t_stack **src, t_stack **dest,
+			t_ops **ops, int nb);
+int		move_a_down_b_up_to_a(t_stack **src, t_stack **dest,
+			t_ops **ops, int nb);
+int		move_a_up_b_down_to_a(t_stack **src, t_stack **dest,
+			t_ops **ops, int nb);
 #endif
